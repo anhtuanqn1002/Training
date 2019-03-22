@@ -51,9 +51,7 @@ class PopupViewController: UIViewController {
                 self.containerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }) { isFinished in
                 guard isFinished else { return }
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.addContentToPopup()
-                })
+                self.addContentToPopup()
             }
         }
     }
@@ -61,14 +59,19 @@ class PopupViewController: UIViewController {
     private func addContentToPopup() {
         let reportContentVC = ContentViewController()
         addChild(reportContentVC)
+        reportContentVC.view.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(reportContentVC.view)
-        self.heightOfContainerConstraint.constant = reportContentVC.view.bounds.size.height
-        self.view.layoutIfNeeded()
         NSLayoutConstraint.activate([
             reportContentVC.view.widthAnchor.constraint(equalTo: self.containerView.widthAnchor),
             reportContentVC.view.heightAnchor.constraint(equalTo: self.containerView.heightAnchor),
             reportContentVC.view.centerXAnchor.constraint(equalTo: self.containerView.centerXAnchor),
             reportContentVC.view.centerYAnchor.constraint(equalTo: self.containerView.centerYAnchor)
             ])
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.heightOfContainerConstraint.constant = min(reportContentVC.heightOfContent, self.view.bounds.size.height * 4 / 5)
+                self.view.layoutIfNeeded()
+            })
+        }
     }
 }

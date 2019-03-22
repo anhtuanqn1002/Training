@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentViewController" customModule="TrainingAll" customModuleProvider="target">
             <connections>
+                <outlet property="scrollView" destination="6pj-F5-XTl" id="mef-cV-4Lh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,38 +21,65 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KG-ei-y4O">
-                    <rect key="frame" x="15" y="15" width="345" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbn-63-tTK">
-                    <rect key="frame" x="15" y="87" width="345" height="188"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Button">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2n-91-dxH">
-                    <rect key="frame" x="15" y="51" width="345" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pj-F5-XTl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                    <subviews>
+                        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoB-q8-yTu">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-9p-gMf">
+                                    <rect key="frame" x="15" y="15" width="345" height="122"/>
+                                    <string key="text">What I am trying to achieve here, is to have the labels in locationXIB populated by the properities of VecerkaAnnotation which were retrieved from Google Firestore. I tried many ways already and am desperate. Any and all help is appreciated, thanks! .</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCH-UF-T7O">
+                                    <rect key="frame" x="15" y="228" width="345" height="47"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-Ua-KQy">
+                                    <rect key="frame" x="15" y="152" width="345" height="61"/>
+                                    <string key="text">For the moment I have passed the data through a global variable, and will use Realm in the future to save and retrieve the data.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="JCH-UF-T7O" secondAttribute="trailing" constant="15" id="2Uy-G3-hSc"/>
+                                <constraint firstItem="JCH-UF-T7O" firstAttribute="leading" secondItem="zoB-q8-yTu" secondAttribute="leading" constant="15" id="2wH-3Z-KpD"/>
+                                <constraint firstAttribute="bottom" secondItem="JCH-UF-T7O" secondAttribute="bottom" constant="15" id="A3W-O4-zdD"/>
+                                <constraint firstItem="ReL-9p-gMf" firstAttribute="top" secondItem="zoB-q8-yTu" secondAttribute="top" constant="15" id="GDd-Wd-byt"/>
+                                <constraint firstAttribute="trailing" secondItem="ReL-9p-gMf" secondAttribute="trailing" constant="15" id="MWL-XN-2pd"/>
+                                <constraint firstItem="5eL-Ua-KQy" firstAttribute="leading" secondItem="zoB-q8-yTu" secondAttribute="leading" constant="15" id="NiG-qT-L6K"/>
+                                <constraint firstItem="5eL-Ua-KQy" firstAttribute="top" secondItem="ReL-9p-gMf" secondAttribute="bottom" constant="15" id="QbX-Nw-Gcr"/>
+                                <constraint firstItem="ReL-9p-gMf" firstAttribute="leading" secondItem="zoB-q8-yTu" secondAttribute="leading" constant="15" id="Y2q-L9-u5s"/>
+                                <constraint firstAttribute="trailing" secondItem="5eL-Ua-KQy" secondAttribute="trailing" constant="15" id="asl-Sm-AOi"/>
+                                <constraint firstItem="JCH-UF-T7O" firstAttribute="top" secondItem="5eL-Ua-KQy" secondAttribute="bottom" constant="15" id="jmD-sS-B57"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zoB-q8-yTu" firstAttribute="height" secondItem="6pj-F5-XTl" secondAttribute="height" priority="250" id="37Q-QG-o5p"/>
+                        <constraint firstItem="zoB-q8-yTu" firstAttribute="leading" secondItem="6pj-F5-XTl" secondAttribute="leading" id="6x3-LU-IdK"/>
+                        <constraint firstItem="zoB-q8-yTu" firstAttribute="top" secondItem="6pj-F5-XTl" secondAttribute="top" id="OQK-dz-6Qf"/>
+                        <constraint firstAttribute="bottom" secondItem="zoB-q8-yTu" secondAttribute="bottom" id="UsJ-Gz-Wuu"/>
+                        <constraint firstItem="zoB-q8-yTu" firstAttribute="width" secondItem="6pj-F5-XTl" secondAttribute="width" id="vYo-y2-TjS"/>
+                        <constraint firstAttribute="trailing" secondItem="zoB-q8-yTu" secondAttribute="trailing" id="xtk-bj-w05"/>
+                    </constraints>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.088011756669999996" blue="0.10099709029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="b2n-91-dxH" firstAttribute="top" secondItem="2KG-ei-y4O" secondAttribute="bottom" constant="15" id="2ds-wO-Tq1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b2n-91-dxH" secondAttribute="trailing" constant="15" id="3KZ-B2-tB6"/>
-                <constraint firstItem="2KG-ei-y4O" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="DhI-tp-J5A"/>
-                <constraint firstItem="Fbn-63-tTK" firstAttribute="top" secondItem="b2n-91-dxH" secondAttribute="bottom" constant="15" id="JQA-0z-0ZI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2KG-ei-y4O" secondAttribute="trailing" constant="15" id="M9q-lu-UVg"/>
-                <constraint firstItem="b2n-91-dxH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Och-NG-MgJ"/>
-                <constraint firstItem="2KG-ei-y4O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="VEb-fs-SpD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fbn-63-tTK" secondAttribute="trailing" constant="15" id="aHA-0Z-L8b"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fbn-63-tTK" secondAttribute="bottom" constant="15" id="lxx-le-T3P"/>
-                <constraint firstItem="Fbn-63-tTK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="nrW-gX-EVC"/>
+                <constraint firstItem="6pj-F5-XTl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Pq-dY-N48"/>
+                <constraint firstAttribute="trailing" secondItem="6pj-F5-XTl" secondAttribute="trailing" id="Ipo-5F-fLV"/>
+                <constraint firstItem="6pj-F5-XTl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hBb-KV-9Gq"/>
+                <constraint firstAttribute="bottom" secondItem="6pj-F5-XTl" secondAttribute="bottom" id="sbh-pJ-nrv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

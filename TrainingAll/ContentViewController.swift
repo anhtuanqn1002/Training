@@ -10,6 +10,12 @@ import UIKit
 
 class ContentViewController: UIViewController {
 
+    @IBOutlet private weak var scrollView: UIScrollView!
+    
+    var heightOfContent: CGFloat {
+        return scrollView.contentSize.height
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
