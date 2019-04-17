@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183B8EAC22658DF8005A391E /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B8EAB22658DF8005A391E /* InfiniteScrollView.swift */; };
+		183B8EAE22658E15005A391E /* InfiniteScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B8EAD22658E15005A391E /* InfiniteScrollView.xib */; };
+		183B8EB12265990F005A391E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B8EAF2265990F005A391E /* CollectionViewCell.swift */; };
+		183B8EB22265990F005A391E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B8EB02265990F005A391E /* CollectionViewCell.xib */; };
+		1847F5FD22671E0900FB3492 /* Infinite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847F5FC22671E0900FB3492 /* Infinite.swift */; };
 		36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5EF1022395C6800F6AB9E /* AppDelegate.swift */; };
 		36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5EF1222395C6800F6AB9E /* ViewController.swift */; };
 		36D5EF1622395C6800F6AB9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5EF1422395C6800F6AB9E /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183B8EAB22658DF8005A391E /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
+		183B8EAD22658E15005A391E /* InfiniteScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteScrollView.xib; sourceTree = "<group>"; };
+		183B8EAF2265990F005A391E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		183B8EB02265990F005A391E /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		1847F5FC22671E0900FB3492 /* Infinite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infinite.swift; sourceTree = "<group>"; };
 		36D5EF0D22395C6800F6AB9E /* TrainingAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D5EF1022395C6800F6AB9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36D5EF1222395C6800F6AB9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,10 +81,15 @@
 			children = (
 				36D5EF1022395C6800F6AB9E /* AppDelegate.swift */,
 				36D5EF1222395C6800F6AB9E /* ViewController.swift */,
+				1847F5FC22671E0900FB3492 /* Infinite.swift */,
 				36D5EF1422395C6800F6AB9E /* Main.storyboard */,
 				36D5EF1722395C6900F6AB9E /* Assets.xcassets */,
 				36D5EF1922395C6900F6AB9E /* LaunchScreen.storyboard */,
 				36D5EF1C22395C6900F6AB9E /* Info.plist */,
+				183B8EAB22658DF8005A391E /* InfiniteScrollView.swift */,
+				183B8EAD22658E15005A391E /* InfiniteScrollView.xib */,
+				183B8EAF2265990F005A391E /* CollectionViewCell.swift */,
+				183B8EB02265990F005A391E /* CollectionViewCell.xib */,
 			);
 			path = TrainingAll;
 			sourceTree = "<group>";
@@ -150,6 +165,8 @@
 				36D5EF1B22395C6900F6AB9E /* LaunchScreen.storyboard in Resources */,
 				36D5EF1822395C6900F6AB9E /* Assets.xcassets in Resources */,
 				36D5EF1622395C6800F6AB9E /* Main.storyboard in Resources */,
+				183B8EAE22658E15005A391E /* InfiniteScrollView.xib in Resources */,
+				183B8EB22265990F005A391E /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183B8EAC22658DF8005A391E /* InfiniteScrollView.swift in Sources */,
+				1847F5FD22671E0900FB3492 /* Infinite.swift in Sources */,
 				36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */,
+				183B8EB12265990F005A391E /* CollectionViewCell.swift in Sources */,
 				36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
