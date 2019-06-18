@@ -6,5 +6,6 @@ target 'TrainingAll' do
   use_frameworks!
 
   # Pods for TrainingAll
+  pod 'XLPagerTabStrip', '~> 9.0'
 
 end
