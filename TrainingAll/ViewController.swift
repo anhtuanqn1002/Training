@@ -8,7 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
-
+import Crashlytics
 class ViewController: ButtonBarPagerTabStripViewController {
 
     var listViewController: [UIViewController] = []
@@ -25,8 +25,17 @@ class ViewController: ButtonBarPagerTabStripViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let button = UIButton(type: .roundedRect)
+        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+        button.setTitle("Crash", for: [])
+        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+        view.addSubview(button)
     }
-
+    
+    @IBAction func crashButtonTapped(_ sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
+    }
+    
     @IBAction private func handleAction(_ sender: Any) {
         let index = Int.random(in: 0...listViewController.count)
         let contentVC = ContentViewController()

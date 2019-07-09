@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>269129330101-2n1dc3vvmcb9psn766eriek3jl6jrj7n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.269129330101-2n1dc3vvmcb9psn766eriek3jl6jrj7n</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBRqYXS0smfai7eH48QK50qo3k0M9KepwQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>269129330101</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>chappiebot.io.test</string>
+	<key>PROJECT_ID</key>
+	<string>training-d8463</string>
+	<key>STORAGE_BUCKET</key>
+	<string>training-d8463.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:269129330101:ios:ffb6c46da22d3c5f</string>
+	<key>DATABASE_URL</key>
+	<string>https://training-d8463.firebaseio.com</string>
+</dict>
+</plist>

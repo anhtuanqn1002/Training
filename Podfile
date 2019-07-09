@@ -8,4 +8,8 @@ target 'TrainingAll' do
   # Pods for TrainingAll
   pod 'XLPagerTabStrip', '~> 9.0'
 
+  pod 'Firebase/Core'
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.13.2'
+  
 end
