@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CC0D5922E84FE800AFF21E /* drugs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 18CC0D5822E84FE800AFF21E /* drugs.sqlite */; };
+		18CC0D5B22E8520C00AFF21E /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC0D5A22E8520C00AFF21E /* DBManager.swift */; };
 		36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5EF1022395C6800F6AB9E /* AppDelegate.swift */; };
 		36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D5EF1222395C6800F6AB9E /* ViewController.swift */; };
 		36D5EF1622395C6800F6AB9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5EF1422395C6800F6AB9E /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18CC0D5822E84FE800AFF21E /* drugs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = drugs.sqlite; sourceTree = "<group>"; };
+		18CC0D5A22E8520C00AFF21E /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		36D5EF0D22395C6800F6AB9E /* TrainingAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D5EF1022395C6800F6AB9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36D5EF1222395C6800F6AB9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				36D5EF1722395C6900F6AB9E /* Assets.xcassets */,
 				36D5EF1922395C6900F6AB9E /* LaunchScreen.storyboard */,
 				36D5EF1C22395C6900F6AB9E /* Info.plist */,
+				18CC0D5822E84FE800AFF21E /* drugs.sqlite */,
+				18CC0D5A22E8520C00AFF21E /* DBManager.swift */,
 			);
 			path = TrainingAll;
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 				36D5EF0922395C6800F6AB9E /* Sources */,
 				36D5EF0A22395C6800F6AB9E /* Frameworks */,
 				36D5EF0B22395C6800F6AB9E /* Resources */,
+				B24B0DDFA29DC2999FC28A3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5EF1B22395C6900F6AB9E /* LaunchScreen.storyboard in Resources */,
+				18CC0D5922E84FE800AFF21E /* drugs.sqlite in Resources */,
 				36D5EF1822395C6900F6AB9E /* Assets.xcassets in Resources */,
 				36D5EF1622395C6800F6AB9E /* Main.storyboard in Resources */,
 			);
@@ -174,6 +182,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B24B0DDFA29DC2999FC28A3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainingAll/Pods-TrainingAll-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrainingAll/Pods-TrainingAll-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrainingAll/Pods-TrainingAll-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -182,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */,
+				18CC0D5B22E8520C00AFF21E /* DBManager.swift in Sources */,
 				36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

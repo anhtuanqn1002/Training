@@ -6,5 +6,6 @@ target 'TrainingAll' do
   use_frameworks!
 
   # Pods for TrainingAll
-
+  pod 'SQLite.swift'
+  pod 'RealmSwift'
 end
