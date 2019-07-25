@@ -42,20 +42,25 @@ struct Drug {
     let infor: String
     let nameNoAccent: String
     
-    init?(row: Row) {
+    init?(row: Row, template: String = "") {
+        var prefix = ""
+        if !template.isEmpty {
+            prefix = "\"\(template)\".\""
+        }
         do {
-            id = try row.get(Expression<Int>("id"))
-            drugRegisterID = try row.get(Expression<String>("drug_register_id"))
-            pharmaceuticalForm = try row.get(Expression<String>("pharmaceutical_form"))
-            proprietaryName = try row.get(Expression<String>("proprietary_name"))
-            drugImage = try row.get(Expression<String>("drug_image"))
-            name = try row.get(Expression<String>("name"))
-            isViewed = try row.get(Expression<Int>("is_viewed"))
-            status = try row.get(Expression<Int>("status"))
-            categoryID = try row.get(Expression<Int>("category_id"))
-            thanhphan = try row.get(Expression<String>("thanhphan"))
-            infor = try row.get(Expression<String>("infor"))
-            nameNoAccent = try row.get(Expression<String>("name_no_accent"))
+            
+            id = try row.get(Expression<Int>("\(prefix)id\""))
+            drugRegisterID = try row.get(Expression<String>("\(prefix)drug_register_id\""))
+            pharmaceuticalForm = try row.get(Expression<String>("\(prefix)pharmaceutical_form\""))
+            proprietaryName = try row.get(Expression<String>("\(prefix)proprietary_name\""))
+            drugImage = try row.get(Expression<String>("\(prefix)drug_image\""))
+            name = try row.get(Expression<String>("\(prefix)name\""))
+            isViewed = try row.get(Expression<Int>("\(prefix)is_viewed\""))
+            status = try row.get(Expression<Int>("\(prefix)status\""))
+            categoryID = try row.get(Expression<Int>("\(prefix)category_id\""))
+            thanhphan = try row.get(Expression<String>("\(prefix)thanhphan\""))
+            infor = try row.get(Expression<String>("\(prefix)infor\""))
+            nameNoAccent = try row.get(Expression<String>("\(prefix)name_no_accent\""))
         } catch {
             return nil
         }
@@ -80,5 +85,49 @@ final class DBManager {
             return Drug(row: row)
         }
         print(drug.count)
+        
+        let categoriesTable = drugCategoryTable.filter(Expression<Int>("parent_id") == 0)
+        let categories = try! db.prepare(categoriesTable).compactMap { DrugCategory(row: $0) }
+        print(categories.count)
+        
+        let subCategoriesTable = drugCategoryTable.filter(Expression<Int>("parent_id") == 161)
+        let subCategories = try! db.prepare(subCategoriesTable).compactMap { DrugCategory(row: $0) }
+        print(subCategories.count)
+        
+        let subCategoriesTable2 = drugCategoryTable.filter(Expression<Int>("parent_id") == 162)
+        let subCategories2 = try! db.prepare(subCategoriesTable2).compactMap { DrugCategory(row: $0) }
+        print(subCategories2.count)
+        
+        
+        let drugCategoryMappingTable = Table("tbDrugCategoryMapping")
+        let id = Expression<Int>("id")
+        let drugRegisterID = Expression<String>("drug_register_id")
+//        drugCategoryMappingTable[*]
+        let query = drugCategoryMappingTable
+//            .select(drugCategoryMappingTable[*])
+//            .select(drugTable[id])
+            .join(.leftOuter, drugTable, on: Expression<Int>("id_drug") == drugTable[Expression<Int>("id")])
+            .filter(Expression<Int>("id_cat") == subCategories2[0].id)
+        
+        
+        
+        
+//        let getDrug = try! db.prepare("Select * from tbDrugCategoryMapping join tbDrug on id_drug = tbDrug.id where id_cat = 163")
+//        getDrug.compactMap { (result) -> Drug? in
+//            result[0]
+//            return nil
+//        }
+//        let stmt = try db.prepare("SELECT id, email FROM users")
+//        for row in stmt {
+//            for (index, name) in stmt.columnNames.enumerated() {
+//                print ("\(name):\(row[index]!)")
+//                // id: Optional(1), email: Optional("alice@mac.com")
+//            }
+//        }
+        
+//        let drugs = try! db.prepare("Select * from tbDrugCategoryMapping join tbDrug on id_drug = tbDrug.id where id_cat = 163").compactMap { Drug(row: $0) }
+        
+        let drugs = try! db.prepare(query).compactMap { Drug(row: $0, template: "tbDrug") }
+        print(drugs.count)
     }
 }
