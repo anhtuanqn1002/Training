@@ -12,6 +12,7 @@
 		36D5EF1622395C6800F6AB9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5EF1422395C6800F6AB9E /* Main.storyboard */; };
 		36D5EF1822395C6900F6AB9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D5EF1722395C6900F6AB9E /* Assets.xcassets */; };
 		36D5EF1B22395C6900F6AB9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D5EF1922395C6900F6AB9E /* LaunchScreen.storyboard */; };
+		ABA6DF37236F1373006AD6F7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6DF35236F1373006AD6F7 /* CollectionViewCell.swift */; };
 		E0692B0772F84749DF8D05AD /* Pods_TrainingAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9578C398018D977FC6F0A2 /* Pods_TrainingAll.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		36D5EF1C22395C6900F6AB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F9578C398018D977FC6F0A2 /* Pods_TrainingAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		711A2CD8F5226EF9B23D060C /* Pods-TrainingAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingAll/Pods-TrainingAll.debug.xcconfig"; sourceTree = "<group>"; };
+		ABA6DF35236F1373006AD6F7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B744AF1C4898FAE226A68E31 /* Pods-TrainingAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingAll/Pods-TrainingAll.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			children = (
 				36D5EF1022395C6800F6AB9E /* AppDelegate.swift */,
 				36D5EF1222395C6800F6AB9E /* ViewController.swift */,
+				ABA6DF35236F1373006AD6F7 /* CollectionViewCell.swift */,
 				36D5EF1422395C6800F6AB9E /* Main.storyboard */,
 				36D5EF1722395C6900F6AB9E /* Assets.xcassets */,
 				36D5EF1922395C6900F6AB9E /* LaunchScreen.storyboard */,
@@ -183,6 +186,7 @@
 			files = (
 				36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */,
 				36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */,
+				ABA6DF37236F1373006AD6F7 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,15 +333,19 @@
 			baseConfigurationReference = 711A2CD8F5226EF9B23D060C /* Pods-TrainingAll.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDNUZLKWC;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 29T66LHW6L;
 				INFOPLIST_FILE = TrainingAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tuan.nva.TrainingAll;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.neo-lab.250keirin.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,15 +356,19 @@
 			baseConfigurationReference = B744AF1C4898FAE226A68E31 /* Pods-TrainingAll.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YDNUZLKWC;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 29T66LHW6L;
 				INFOPLIST_FILE = TrainingAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tuan.nva.TrainingAll;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.neo-lab.250keirin.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

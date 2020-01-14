@@ -1,0 +1,54 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :beta do
+    # add actions here: https://docs.fastlane.tools/actions
+    outputDirectory = File.expand_path(File.dirname(__FILE__) + "/build")
+    gym(
+      output_directory: outputDirectory,
+      output_name: "Keirin250.ipa",
+      export_method: "enterprise",
+      export_options: {
+        signingStyle: "manual",
+        provisioningProfiles: {
+          "jp.co.neo-lab.250keirin.dev" => "Dis 250KEIRIN Dev"
+        }
+      }
+    )
+
+  notification(
+	  subtitle: "Finished Building", 
+	  message: "Ready to upload...",
+	  execute: "open #{outputDirectory}"
+  )
+  increment_build_number
+  commit_version_bump(
+    message: "Version: #{get_version_number} - build: #{get_build_number}",
+    ignore: outputDirectory
+  )
+  sh("rm -rf ~/Library/Developer/Xcode/Archives/$(date +%Y-%m-%d)/Keirin250*.xcarchive")
+  end
+
+  # error block is executed when a error occurs
+  error do |lane, exception|
+    notification(
+      message: exception.to_s
+    )
+  end
+end
