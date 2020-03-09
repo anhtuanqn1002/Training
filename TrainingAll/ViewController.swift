@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        RCValues.shared.fetchCloudValues()
+        print("==> \(RCValues.shared.getValue(.mainColor).stringValue)")
     }
 }
 
