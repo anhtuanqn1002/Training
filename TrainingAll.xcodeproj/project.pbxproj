@@ -16,6 +16,8 @@
 		AB1D6091241646050037BEC5 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB1D6090241646050037BEC5 /* RemoteConfigDefaults.plist */; };
 		AB9F04E124164410007923CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9F04E024164410007923CA /* GoogleService-Info.plist */; };
 		ABA6DF37236F1373006AD6F7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6DF35236F1373006AD6F7 /* CollectionViewCell.swift */; };
+		ABC6B13B28B38E940039F21A /* Atomic-HaishinKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6B13A28B38E940039F21A /* Atomic-HaishinKit.swift */; };
+		ABC6B13D28B38EF40039F21A /* Atomic-Amplify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6B13C28B38EF40039F21A /* Atomic-Amplify.swift */; };
 		E0692B0772F84749DF8D05AD /* Pods_TrainingAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9578C398018D977FC6F0A2 /* Pods_TrainingAll.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		AB1D6090241646050037BEC5 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		AB9F04E024164410007923CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABA6DF35236F1373006AD6F7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		ABC6B13A28B38E940039F21A /* Atomic-HaishinKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atomic-HaishinKit.swift"; sourceTree = "<group>"; };
+		ABC6B13C28B38EF40039F21A /* Atomic-Amplify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Atomic-Amplify.swift"; sourceTree = "<group>"; };
 		B744AF1C4898FAE226A68E31 /* Pods-TrainingAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingAll/Pods-TrainingAll.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		36D5EF0F22395C6800F6AB9E /* TrainingAll */ = {
 			isa = PBXGroup;
 			children = (
+				ABC6B13928B38E7C0039F21A /* Utils */,
 				AB9F04E024164410007923CA /* GoogleService-Info.plist */,
 				AB1D6090241646050037BEC5 /* RemoteConfigDefaults.plist */,
 				36D5EF1022395C6800F6AB9E /* AppDelegate.swift */,
@@ -89,6 +94,15 @@
 				AB1D608E241645CB0037BEC5 /* RCValues.swift */,
 			);
 			path = TrainingAll;
+			sourceTree = "<group>";
+		};
+		ABC6B13928B38E7C0039F21A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ABC6B13A28B38E940039F21A /* Atomic-HaishinKit.swift */,
+				ABC6B13C28B38EF40039F21A /* Atomic-Amplify.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E4B298BECF319B4C9261285D /* Pods */ = {
@@ -215,6 +229,8 @@
 			files = (
 				36D5EF1322395C6800F6AB9E /* ViewController.swift in Sources */,
 				36D5EF1122395C6800F6AB9E /* AppDelegate.swift in Sources */,
+				ABC6B13B28B38E940039F21A /* Atomic-HaishinKit.swift in Sources */,
+				ABC6B13D28B38EF40039F21A /* Atomic-Amplify.swift in Sources */,
 				AB1D608F241645CB0037BEC5 /* RCValues.swift in Sources */,
 				ABA6DF37236F1373006AD6F7 /* CollectionViewCell.swift in Sources */,
 			);
