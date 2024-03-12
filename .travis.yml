@@ -1,0 +1,8 @@
+language: objective-c
+xcode_workspace: Training.xcworkspace # path to your xcodeproj folder
+xcode_scheme: Training
+#xcode_sdk: iphonesimulator11.3
+osx_image: xcode13.1
+
+script:
+  - xcodebuild clean build -sdk iphonesimulator -workspace Training.xcworkspace -scheme Training CODE_SIGNING_REQUIRED=NO
